@@ -45,7 +45,7 @@ ruleset a2269x1 {
 	}
 
 	rule hello_world {
-		select when web pageview url re/https?:\/\/(?:www|\w+)?\.(.*\.\w{2,4})\// setting (our_domain)
+		select when web pageview url re/https?:\/\/(?:\w+?\.)?(.*?\.\w{2,4})\// setting (our_domain)
 		pre {
             message = <<
                 You are on #{our_domain}
