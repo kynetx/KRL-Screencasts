@@ -51,8 +51,8 @@ ruleset a2269x1 {
                 You are on #{our_domain}
             >>;
 		}
-		notify("Hello World", "This is a sample rule." + message) with 
-            sticky = true;
+		notify("Hello World", "This is a sample rule." + message) 
+            with sticky = true;
 	}
     
     rule bacon_decoration {
@@ -63,8 +63,8 @@ ruleset a2269x1 {
                     var result_domain = $K(".f cite", search_result).text();
                     var result_url = $K(".r a", search_result).attr("href").replace(/.*url=(.*?)(?:&|$)/, "$1");
                     
-                    console.log(result_domain);
-                    console.log(result_url);
+                    // console.log(result_domain);
+                    // console.log(result_url);
                     
                     if (result_domain.match(/bacon/)) {
                         return "<span class = 'my-bacon-annotation'>Bacon is soooooo good!!!! Yum!</span>";
